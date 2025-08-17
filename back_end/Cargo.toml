@@ -1,0 +1,23 @@
+[package]
+name = "back_end"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+path = "src/lib.rs"
+name = "back_end"
+
+[dependencies]
+dotenv = "*"
+serde = { version = "*", features = ["derive"] }
+tokio = { version = "*", features = ["full"] }
+axum = { version = "*", features = ["macros"] }
+serde_json = "*"
+sqlx = { version = "*", features = ["mysql", "runtime-tokio-rustls", "macros"] }
+hyper = "*"
+tower-http = { version = "*", features = ["fs"] }
+tower-cookies = "*"
+anyhow = "*"
+
+[dev-dependencies]
+httpc-test = "0.1.1"
